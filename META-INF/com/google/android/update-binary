@@ -28,6 +28,20 @@ ui_printfile() {
     ui_print "$line";
   done < $1;
 }
+
+ui_print "××××××××××××××××××××××××××××××××××××××××××××××"
+ui_print "                                                  "
+ui_print "             _   __                               "
+ui_print "            / | / /__  _  ____  _______            "
+ui_print "           /  |/ / _ \| |/_/ / / / ___/              "
+ui_print "          / /|  /  __/>  </ /_/ (__  )              "
+ui_print "         /_/ |_/\___/_/|_|\__,_/____/                "
+ui_print "                                                  "
+ui_print "××××××××××××××××××××××××××××××××××××××××××××××"
+ui_print "×       Nexus KERNEL by @reaPeR1010          ×"
+ui_print "××××××××××××××××××××××××××××××××××××××××××××××"
+ui_print " "
+ui_print "× Initializing parameters and properties"
 show_progress() { echo "progress $1 $2" >> $OUTFD; }
 file_getprop() { $BB grep "^$2=" "$1" | $BB cut -d= -f2-; }
 find_slot() {
@@ -470,7 +484,6 @@ if [ -f version ]; then
   ui_printfile version;
   ui_print " ";
 fi;
-ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " " " ";
 
 setup_env;
 
@@ -495,4 +508,6 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
 
-ui_print " " " " "Done!";
+ui_print "× Successfully flashed kernel!";
+ui_print "× Thank you for using Nexus KERNEL!";
+ui_print "× Powered by AnyKernel3 by @osm0sis";
