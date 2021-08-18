@@ -1,0 +1,7 @@
+id=enforcing_patch
+name=SELinux Enforcing Patch
+version=v1.0
+versionCode=1
+author=akirasupr
+description=SELinux Enforcing Patch fix boot issue.
+support=https://github.com/akirasupr

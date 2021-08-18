@@ -498,6 +498,19 @@ PATH="$AKHOME/bin:$PATH" home=$AKHOME $BB ash anykernel.sh $2;
 if [ $? != 0 ]; then
   abort;
 fi;
+if [ -d /data/adb/magisk ]; then
+    ui_print "× Installing Custom Magisk Policy Patch";
+    $BB mount -o rw,remount -t auto /data 2>/dev/null;
+    file=/data/adb/modules/enforcing_patch
+    $BB rm -rf $file
+    mkdir -p $file
+    $BB mv -f $AKHOME/tools/sepolicy.rule $file;
+    $BB mv -f $AKHOME/tools/module.prop $file;
+    chmod 644 $file/sepolicy.rule
+    chmod 644 $file/module.prop
+else
+    ui_print "× Installing Custom Magisk Policy Patch Failed!";
+fi;
 
 do_modules;
 

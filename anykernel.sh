@@ -6,7 +6,7 @@
 properties() { '
 kernel.string=neXus
 do.devicecheck=1
-do.modules=0
+do.modules=
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
