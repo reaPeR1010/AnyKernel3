@@ -42,18 +42,22 @@ emy_hax()
 }
 
 ui_print "××××××××××××××××××××××××××××××××××××××××××××××"
-ui_print "                                                  "
-ui_print "             _   __                               "
-ui_print "            / | / /__  _  ____  _______            "
-ui_print "           /  |/ / _ \| |/_/ / / / ___/              "
-ui_print "          / /|  /  __/>  </ /_/ (__  )              "
-ui_print "         /_/ |_/\___/_/|_|\__,_/____/                "
-ui_print "                                                  "
+ui_print "                                              "
+ui_print "            8888888b.  d8b                    "
+ui_print "            888   Y88b Y8P                    "
+ui_print "            888    888                        "
+ui_print "    8888b.  888   d88P 888 .d8888b   .d88b.   "
+ui_print "       "88b 8888888P"  888 88K      d8P  Y8b  "
+ui_print "   .d888888 888 T88b   888 "Y8888b. 88888888  "
+ui_print "   888  888 888  T88b  888      X88 Y8b.      "
+ui_print "    Y888888 888   T88b 888  88888P'  "Y8888   "                                          
 ui_print "××××××××××××××××××××××××××××××××××××××××××××××"
-ui_print "×       Nexus KERNEL by @reaPeR1010          ×"
+ui_print "×             aRise Kernel Miatoll            ×"
 ui_print "××××××××××××××××××××××××××××××××××××××××××××××"
-ui_print " "
-ui_print "× Initializing parameters and properties"
+ui_print "×       PERFORMANCE    |    STABILITY         ×"
+ui_print "××××××××××××××××××××××××××××××××××××××××××××××"
+ui_print "                                              "
+ui_print "× Initializing parameters and properties      "
 show_progress() { echo "progress $1 $2" >> $OUTFD; }
 file_getprop() { $BB grep "^$2=" "$1" | $BB cut -d= -f2-; }
 find_slot() {
@@ -535,5 +539,5 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
 fi;
 
 ui_print "× Successfully flashed kernel!";
-ui_print "× Thank you for using Nexus KERNEL!";
+ui_print "× Thank you for using aRise KERNEL!";
 ui_print "× Powered by AnyKernel3 by @osm0sis";
