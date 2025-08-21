@@ -65,11 +65,11 @@ if mountpoint -q /data; then
 
     echo "Writing new extension list"
 
-    for ext in $(cat $home/f2fs-cold.list | grep -v '#'); do
+    for ext in $(cat $AKHOME/f2fs-cold.list | grep -v '#'); do
       [ ! -z $ext ] && echo "[c]$ext" > $list_path
     done
 
-    for ext in $(cat $home/f2fs-hot.list); do
+    for ext in $(cat $AKHOME/f2fs-hot.list); do
       [ ! -z $ext ] && echo "[h]$ext" > $list_path
     done
   done
