@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=MiatollKernel
+kernel.string=Nexus Kernel for Miatoll Devices
 do.devicecheck=1
 do.modules=0
 do.systemless=1
