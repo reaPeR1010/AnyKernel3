@@ -42,20 +42,3 @@ dump_boot; # use split_boot to skip ramdisk unpack, e.g. for devices with init_b
 
 write_boot; # use flash_boot to skip ramdisk repack, e.g. for devices with init_boot ramdisk
 ## end boot install
-
-
-# vendor_boot shell variables
-BLOCK=vendor_boot;
-IS_SLOT_DEVICE=1;
-RAMDISK_COMPRESSION=auto;
-PATCH_VBMETA_FLAG=auto;
-
-# reset for vendor_boot patching
-reset_ak;
-
-# vendor_boot install
-split_boot;
-
-flash_boot;
-## end vendor_boot install
-
